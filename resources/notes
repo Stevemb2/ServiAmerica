@@ -1,0 +1,30 @@
+Required for webpack
+
+npm i -D react react-dom
+npm i path
+npm i -D webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader
+npm i -D html-webpack-plugin html-loader
+npm i -D webpack-dev-server
+
+Required for Client
+
+npm i @emotion/css
+npm i @reach/router
+
+Required for server
+
+npm i express
+npm i http
+npm i path
+npm i fs
+npm i body-parser
+npm i multer
+npm i os
+npm i mongoose
+npm i nodemailer
+npm i pdfkit
+npm i jsonwebtoken
+npm i winston
+npm i bcrypt
+npm i winston
+

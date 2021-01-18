@@ -1,0 +1,40 @@
+
+#Installing MongoDB
+
+brew tap mongodb/brew
+brew install mongodb-community
+brew services start mongodb-community
+
+# Starting MongoDB
+
+brew services start mongodb-community
+
+# Drop a collection
+
+db.users.drop()
+
+# Find all users
+
+db.users.find({})
+
+# Inserting mongodb data
+
+db.users.drop()
+
+db.users.insert({"email":"stevenmb2@gmail.com","password":"password","name":"Steve","status":"active","lastLogin":"2020-03-15 00:00:00"})
+db.users.insert({"email":"mariaburnsre@gmail.com","password":"password","name":"Maria","status":"active","lastLogin":"2020-02-12 00:00:00"})
+
+db.clients.drop()
+
+db.clients.insert({"email":"stevenmb2@gmail.com","honorific":"Mr.","firstname":"Steven","lastname":"Burns","areacode":503,"prefix":703,"linenumber":8586,"address":"4306 Arbor Cove Circle","city":"Oceanside","state":"California","zip":92958,"language":"English","birthmonth":"February","birthday":20,"birthyear":1962,"status":"active"})
+db.clients.insert({"email":"mariaburnsre@gmail.com","honorific":"Mrs.","firstname":"Maria","lastname":"Burns","areacode":503,"prefix":703,"linenumber":8586,"address":"4306 Arbor Cove Circle","city":"Oceanside","state":"California","zip":92958,"language":"Spanish","birthmonth":"September","birthday":20,"birthyear":1966,"status":"active"})
+
+db.templates.drop()
+
+db.templates.insert({"name":"home purchase","subject":"Would you like to purchase a house?","body":"We have cheap homes for sale.","emailArray":["stevenmb2@gmail.com","mariaburnsre@gmail.com"],"attachmentArray":["rabbit.jpg"],"type":"standard"})
+db.templates.insert({"name":"taxes","subject":"Do you want to pay your taxes?","body":"You will have to pay more taxes if you do not do your taxes with us.","emailArray":["stevenmb2@gmail.com","mariaburnsre@gmail.com"],"attachmentArray":["rabbit.jpg"],"type":"standard"})
+db.templates.insert({"name":"birthday","subject":"Happy Birthday","body":"Have a very happy birthday","emailArray":["stevenmb2@gmail.com","mariaburnsre@gmail.com"],"attachmentArray":["rabbit.jpg"],"type":"birthday"})
+
+db.settings.drop()
+
+db.settings.insert({"senderEmail":"stevenmb2@gmail.com","templateName":"taxes","clientEmail":"stevenmb2@gmail.com","sendBirthdateEmails":false,"test":true,"mailingLabelFont":"Times-Roman","mailingLabelFontSize":12,"mailingLabelSpacing":2,"attachment":"rabbit"})

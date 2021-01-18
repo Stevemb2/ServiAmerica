@@ -1,0 +1,23 @@
+
+To start the Server
+$ node ./ServAmerica
+
+To start the UI
+$ npm start
+
+To start the client
+$ npm run client
+
+The following directories must be copied over from public to dist:
+attachments, images, taxtables
+
+To start the Server
+$ npm run Server
+
+To run the application in the background on the command line:
+$ nohup node ./server/ServiAmerica.js > /dev/null 2>&1 &
+
+To kill the process:
+$ ps -ef | grep ServiAmerica.js
+$ kill <PROCESS ID>
+
