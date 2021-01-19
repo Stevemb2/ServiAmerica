@@ -70,7 +70,7 @@ const Attachments = () => {
       });
   };
 
-  let imageSrc = `attachments/${selectedAttachment}`;
+  let imageSrc = `../../public/attachments/${selectedAttachment}`;
 
   return (
     <div>
