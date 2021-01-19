@@ -149,7 +149,7 @@ const Emails = () => {
 
                   clear();
                 }}
-                onBlur={event => {
+                onChange={event => {
                   settingsService
                     .setSenderEmail(event.target.value)
                     .then(senderEmail => {
@@ -181,7 +181,7 @@ const Emails = () => {
               <select
                 value={name}
                 onClick={() => {}}
-                onBlur={event => {
+                onChange={event => {
                   settingsService
                     .setTemplateName(event.target.value)
                     .then(name => {
@@ -214,7 +214,7 @@ const Emails = () => {
               <select
                 value={email}
                 onClick={() => {}}
-                onBlur={event => {
+                onChange={event => {
                   settingsService
                     .setClientEmail(event.target.value)
                     .then(clientEmail => {

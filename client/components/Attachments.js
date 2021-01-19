@@ -139,7 +139,7 @@ const Attachments = () => {
               <td>
                 <select
                   value={selectedAttachment}
-                  onBlur={event => {
+                  onChange={event => {
                     setSelectedAttachment(event.target.value);
                   }}
                 >

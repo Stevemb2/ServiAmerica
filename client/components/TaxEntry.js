@@ -10,7 +10,7 @@ const TaxEntry = props => {
             <td>Filing Type: </td>
             <td>
               <select
-                onBlur={event => {
+                onChange={event => {
                   props.setFilingType(event.target.value);
                 }}
               >
@@ -40,7 +40,7 @@ const TaxEntry = props => {
             <td>Child Deductions:</td>
             <td>
               <select
-                onBlur={event => {
+                onChange={event => {
                   props.setChildDeductions(event.target.value);
                 }}
               >

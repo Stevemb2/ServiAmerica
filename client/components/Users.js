@@ -163,7 +163,7 @@ const Users = () => {
               <select
                 id="status"
                 value={user.status}
-                onBlur={event => {
+                onChange={event => {
                   setUser(
                     Object.assign(newUser, { status: event.target.value })
                   );

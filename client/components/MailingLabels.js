@@ -192,7 +192,7 @@ const MailingLabels = () => {
                   setFont(selectedFont);
                   findPDF(selectedFont, size, spacing);
                 }}
-                onBlur={event => {
+                onChange={event => {
                   const selectedFont = event.target.value;
                   setFont(selectedFont);
                   findPDF(selectedFont, size, spacing);
@@ -212,7 +212,7 @@ const MailingLabels = () => {
               <select
                 id="size"
                 value={size}
-                onBlur={event => {
+                onChange={event => {
                   const selectedSize = event.target.value;
                   setSize(selectedSize);
                   findPDF(font, selectedSize, spacing);
@@ -232,7 +232,7 @@ const MailingLabels = () => {
               <select
                 id="spacing"
                 value={spacing}
-                onBlur={event => {
+                onChange={event => {
                   const selectedSpacing = event.target.value;
                   setSpacing(selectedSpacing);
                   findPDF(font, size, selectedSpacing);
@@ -252,7 +252,7 @@ const MailingLabels = () => {
               <select
                 id="pdfs"
                 value={pdf}
-                onBlur={event => {
+                onChange={event => {
                   const data = parsePDFName(event.target.value);
                   findPDF(data.font, data.size, data.spacing);
                   setPDF(event.target.value);

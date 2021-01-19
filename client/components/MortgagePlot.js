@@ -39,7 +39,7 @@ const MortgagePlot = props => {
         <span>Plot Type:</span>&nbsp;
         <select
           value={mortgage.plotType}
-          onBlur={event => {
+          onChange={event => {
             setMortgage({
               amount: mortgage.amount,
               rate: mortgage.rate,
@@ -50,7 +50,13 @@ const MortgagePlot = props => {
             });
           }}
         >
-          <option key="all" value="all">
+          <option
+            className={css`
+            color: black;
+          `}
+          key="total"
+          value="total"
+        >
             All
           </option>
           <option

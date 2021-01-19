@@ -147,7 +147,7 @@ const Home = () => {
                 <select
                   id="type"
                   value={client.honorific}
-                  onBlur={event => {
+                  onChange={event => {
                     setClient(
                       Object.assign(newClient, {
                         honorific: event.target.value
@@ -310,7 +310,7 @@ const Home = () => {
                 <select
                   id="type"
                   value={client.state}
-                  onBlur={event => {
+                  onChange={event => {
                     setClient(
                       Object.assign(newClient, { state: event.target.value })
                     );
@@ -352,7 +352,7 @@ const Home = () => {
                 <select
                   id="language"
                   value={client.language}
-                  onBlur={event => {
+                  onChange={event => {
                     setClient(
                       Object.assign(newClient, { language: event.target.value })
                     );
@@ -377,7 +377,7 @@ const Home = () => {
                   <select
                     id="birthmonth"
                     value={client.birthmonth}
-                    onBlur={event => {
+                    onChange={event => {
                       setClient(
                         Object.assign(newClient, {
                           birthmonth: event.target.value
@@ -403,7 +403,7 @@ const Home = () => {
                   <select
                     id="birthday"
                     value={client.birthday}
-                    onBlur={event => {
+                    onChange={event => {
                       setClient(
                         Object.assign(newClient, {
                           birthday: +event.target.value
@@ -424,7 +424,7 @@ const Home = () => {
                   <select
                     id="birthyear"
                     value={client.birthyear}
-                    onBlur={event => {
+                    onChange={event => {
                       setClient(
                         Object.assign(newClient, {
                           birthyear: +event.target.value

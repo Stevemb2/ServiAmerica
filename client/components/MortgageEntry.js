@@ -79,7 +79,7 @@ const MortgageEntry = props => {
               <select
                 id="term"
                 value={mortgage.term}
-                onBlur={event => {
+                onChange={event => {
                   setMortgage(
                     Object.assign(newMortgage, { term: event.target.value })
                   );
@@ -100,7 +100,7 @@ const MortgageEntry = props => {
               <select
                 id="numberpayments"
                 value={mortgage.numberpayments}
-                onBlur={event => {
+                onChange={event => {
                   setMortgage(
                     Object.assign(newMortgage, {
                       numberpayments: event.target.value

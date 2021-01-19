@@ -200,7 +200,7 @@ const Templates = () => {
               <select
                 id="type"
                 value={template.type}
-                onBlur={event => {
+                onChange={event => {
                   setTemplate(
                     Object.assign(newTemplate, { type: event.target.value })
                   );
@@ -273,7 +273,7 @@ const Templates = () => {
             </td>
             <td>
               <select
-                onBlur={event => {
+                onChange={event => {
                   setSelectedAttachment(event.target.value);
                 }}
               >

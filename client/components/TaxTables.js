@@ -198,7 +198,7 @@ const TaxTables = () => {
               <td>
                 <select
                   value={selectedTaxTable}
-                  onBlur={event => {
+                  onChange={event => {
                     setSelectedTaxTable(event.target.value);
                     readTaxTable(event.target.value);
                   }}
@@ -219,7 +219,7 @@ const TaxTables = () => {
               <td>
                 <select
                   value={status}
-                  onBlur={event => {
+                  onChange={event => {
                     const selectedStatus = event.target.value;
 
                     setStatus(selectedStatus);
