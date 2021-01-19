@@ -28,3 +28,6 @@ npm i winston
 npm i bcrypt
 npm i winston
 
+Must first run 'npm run start' and then start the node server.
+
+

@@ -14,7 +14,7 @@ import Templates from "./Templates";
 import Attachments from "./Attachments";
 import Users from "./Users";
 import { css } from "@emotion/css";
-import "../App.css";
+import "../../public/stylesheets/App.css";
 
 const Main = () => {
   const userHook = useState({

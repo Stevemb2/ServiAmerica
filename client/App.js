@@ -1,14 +1,14 @@
-import bengalCatImage from "./images/bengalcat.jpg";
+import React from "react";
+import ReactDOM from "react-dom";
+import Main from "./components/Main";
 
 const App = () => {
     return (
         <div>
-            <h1>Hello Kitty</h1>
-            <br/>
-            <img src={bengalCatImage} alt="bengal cat" />
+            <Main />
         </div>
     );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
 

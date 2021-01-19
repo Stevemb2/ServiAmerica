@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link, navigate } from "@reach/router";
 import UserContext from "../context/UserContext";
-import "../App.css";
 import { css } from "@emotion/css";
 import Clock from "./Clock";
+import "../../public/stylesheets/App.css";
 
-import bengalImg from "../images/bengal.jpg";
-import germanShepherdImg from "../images/german-shepherd.jpg";
+import bengalImg from "../../public/images/bengal.jpg";
+import germanShepherdImg from "../../public/images/german-shepherd.jpg";
 
 const NavBar = () => {
   const [user, setUser] = useContext(UserContext);

@@ -4,16 +4,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: "development",
-    entry: "./client/index.js",
+    //context: __dirname,
+    entry: "./client/App.js",
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist")
     },
     devServer: {
-        contentBase: "./dist",
+        //publicPath: "./client",
+        contentBase: "./client",
         historyApiFallback: true,
         port: 3000
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -49,7 +52,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "./client/index.html"
+            template: "./public/index.html"
         })
     ]
 }

@@ -18,10 +18,10 @@ const bcrypt = require("bcrypt");
 // Parseq for handling asynchronous functions
 const parseq = require("./parseq/parseq");
 
-const attachmentDirectoryPath = path.join(__dirname, "..", "dist/attachments");
-const taxTableDirectoryPath = path.join(__dirname, "..", "dist/taxtables");
-const pdfDirectoryPath = path.join(__dirname, "..", "dist/mailinglabels");
-const clientsDirectoryPath = path.join(__dirname, "..", "dist/clients");
+const attachmentDirectoryPath = path.join(__dirname, "..", "public/attachments");
+const taxTableDirectoryPath = path.join(__dirname, "..", "public/taxtables");
+const pdfDirectoryPath = path.join(__dirname, "..", "public/mailinglabels");
+const clientsDirectoryPath = path.join(__dirname, "..", "public/clients");
 
 const federalTaxRatesFilePath = path.join(
   taxTableDirectoryPath,
