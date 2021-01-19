@@ -5,6 +5,8 @@ npm i path
 npm i -D webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader
 npm i -D html-webpack-plugin html-loader
 npm i -D webpack-dev-server
+npm i -D prettier
+npm i -D parcel-bundler
 
 Required for Client
 

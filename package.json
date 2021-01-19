@@ -4,6 +4,8 @@
   "description": "Financial Services application",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel public/index.html",
+    "format": "prettier \"client/**/* .{js,html}\" --write",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -20,6 +22,8 @@
     "file-loader": "^6.2.0",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "webpack": "^5.15.0",

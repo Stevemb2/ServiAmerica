@@ -10,8 +10,7 @@ const AttachmentController = attachmentParams => {
     parseq
   } = attachmentParams;
 
-  attachmentRouter.post(
-    "/upload-attachment",
+  attachmentRouter.post("/upload-attachment",
     authenticationUtilities.verify,
     (req, res) => {
       const fileFilter = (req, file, cb) => {
