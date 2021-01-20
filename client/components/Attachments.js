@@ -7,8 +7,8 @@ const Attachments = () => {
   // States
 
   const [selectedFile, setSelectedFile] = useState(undefined);
-  const [selectedAttachment, setSelectedAttachment] = useState("none");
-  const [attachmentArray, setAttachmentArray] = useState(["none"]);
+  const [selectedAttachment, setSelectedAttachment] = useState("none.jpg");
+  const [attachmentArray, setAttachmentArray] = useState(["none.jpg"]);
   const [message, setMessage] = useState("");
 
   // Services
@@ -28,7 +28,7 @@ const Attachments = () => {
    useEffect(() => {
       settingsService.getAttachment().then(attachment => {
          if (!attachment) {
-            setSelectedAttachment("none");
+            setSelectedAttachment("none.jpg");
          } else {
             setSelectedAttachment(attachment);
          }
@@ -70,7 +70,7 @@ const Attachments = () => {
       });
   };
 
-  let imageSrc = selectedAttachment ? `attachments/${selectedAttachment}` : "attachments/none.jpg";
+  let imageSrc = `attachments/${selectedAttachment}`;
 
   return (
     <div>
@@ -95,7 +95,7 @@ const Attachments = () => {
             type="primary"
             handler={() => {
               uploadAttachment();
-              setSelectedAttachment("none");
+              setSelectedAttachment("none.jpg");
             }}
           />
         </span>
@@ -105,7 +105,7 @@ const Attachments = () => {
             type="danger"
             handler={() => {
               removeAttachment();
-              setSelectedAttachment("none");
+              setSelectedAttachment("none.jpg");
             }}
           />
         </span>
@@ -115,7 +115,7 @@ const Attachments = () => {
             type="info"
             handler={() => {
               setMessage("");
-              setSelectedAttachment("none");
+              setSelectedAttachment("none.jpg");
             }}
           />
         </span>
