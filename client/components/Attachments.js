@@ -70,7 +70,7 @@ const Attachments = () => {
       });
   };
 
-  let imageSrc = `../../public/attachments/${selectedAttachment}`;
+  let imageSrc = selectedAttachment ? `attachments/${selectedAttachment}` : "attachments/none.jpg";
 
   return (
     <div>
@@ -158,7 +158,11 @@ const Attachments = () => {
         <h4>Attachment View</h4>
       </div>
       <div>
-        <img src={imageSrc} width="1000px" alt="Attachment" />
+        <img 
+          src={ imageSrc } 
+          width="1000px" 
+          alt="Attachment" 
+        />
       </div>
     </div>
   );
