@@ -134,7 +134,7 @@ const NavBar = () => {
                 alt="dog"
               />
             </h2>
-            {/*<h4> Welcome {user.name} - Last login: {user.lastLogin} - <Clock /></h4>*/}
+            <h4> Welcome {user.name} - Last login: {user.lastLogin} </h4>
           </div>
           <br />
         </div>
