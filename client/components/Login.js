@@ -1,15 +1,18 @@
 import React, { useContext, useState } from "react";
 import Button from "./Button";
 import { navigate } from "@reach/router";
+import Spinner from "./Spinner";
 import UserContext from "../context/UserContext";
 import UserService from "../services/UserService";
 
 const Login = () => {
   const [user, setUser] = useContext(UserContext);
-
   const [message, setMessage] = useState("");
+  const [isSpinnerDisplayed, setIsSpinnerDisplayed] = useState(false);
 
   const clearLoginPage = () => {
+    setIsSpinnerDisplayed(false);
+
     setUser({
       name: "",
       email: "",
@@ -55,6 +58,7 @@ const Login = () => {
 
   return (
     <div>
+      <Spinner isDisplayed={isSpinnerDisplayed}/>
       <table border="0" cellPadding="0" cellSpacing="0">
         <tbody>
           <tr>

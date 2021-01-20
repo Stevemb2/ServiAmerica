@@ -29,6 +29,7 @@ npm i jsonwebtoken
 npm i winston
 npm i bcrypt
 npm i winston
+npm i react-tooltip
 
 Must first run 'npm run start' and then start the node server.
 
