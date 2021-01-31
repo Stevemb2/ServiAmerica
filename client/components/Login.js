@@ -52,7 +52,7 @@ const Login = () => {
           lastLogin: ""
         });
 
-        setMessage(err);
+        setMessage(err.message);
       });
   };
 

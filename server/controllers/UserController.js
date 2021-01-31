@@ -24,7 +24,7 @@ const UserController = userParams => {
     //parseq.sequence([passwordEncrypt, login])((data, err) => {
     parseq.sequence([login])((data, err) => {
       if (err) {
-        res.send({
+        res.status(500).send({
           isError: true,
           message: JSON.stringify(err)
         });
@@ -33,7 +33,7 @@ const UserController = userParams => {
 
         const token = authenticationUtilities.sign(email, status);
 
-        res.send({
+        res.status(200).send({
           isError: false,
           message: message,
           name: name,
