@@ -491,4 +491,4 @@ const ClientController = clientParams => {
   );
 };
 
-module.exports = ClientController;
+export default ClientController;

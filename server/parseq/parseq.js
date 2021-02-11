@@ -574,7 +574,7 @@ function sequence(requestor_array, time_limit) {
 
 }
 
-module.exports = Object.freeze({
+export default Object.freeze({
     fallback,
     parallel,
     parallel_object,

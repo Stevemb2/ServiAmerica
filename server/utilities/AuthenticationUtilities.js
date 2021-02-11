@@ -71,4 +71,4 @@ const AuthenticationUtilities = (bcrypt, Configuration) => {
     });
 };
 
-module.exports = AuthenticationUtilities;
+export default AuthenticationUtilities;

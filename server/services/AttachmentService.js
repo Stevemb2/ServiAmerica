@@ -54,4 +54,4 @@ const AttachmentService = (fs, logger) => {
   });
 };
 
-module.exports = AttachmentService;
+export default AttachmentService;

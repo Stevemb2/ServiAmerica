@@ -141,6 +141,6 @@ const PDFUtilities = (pdfkit, fs, path, logger) => {
     });
 };
 
-module.exports = PDFUtilities;
+export default PDFUtilities;
 
 

@@ -95,4 +95,4 @@ const SettingsCollection = (mongoose, logger) => {
   });
 };
 
-module.exports = SettingsCollection;
+export default SettingsCollection;

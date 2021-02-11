@@ -177,4 +177,4 @@ const UserController = userParams => {
   );
 };
 
-module.exports = UserController;
+export default UserController;

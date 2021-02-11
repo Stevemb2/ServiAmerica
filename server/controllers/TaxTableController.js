@@ -166,4 +166,4 @@ const TaxTableController = taxTableParams => {
   );
 };
 
-module.exports = TaxTableController;
+export default TaxTableController;

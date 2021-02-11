@@ -140,4 +140,4 @@ const MailingLabelsController = mailingLabelsParams => {
   );
 };
 
-module.exports = MailingLabelsController;
+export default MailingLabelsController;

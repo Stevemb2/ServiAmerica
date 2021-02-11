@@ -351,4 +351,4 @@ const TemplateController = templateParams => {
   );
 };
 
-module.exports = TemplateController;
+export default TemplateController;

@@ -127,4 +127,4 @@ const TaxRatesUtilities = (fs, path, logger) => {
    });
 };
 
-module.exports = TaxRatesUtilities;
+export default TaxRatesUtilities;

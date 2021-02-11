@@ -130,4 +130,4 @@ const EmailController = emailParams => {
   );
 };
 
-module.exports = EmailController;
+export default EmailController;

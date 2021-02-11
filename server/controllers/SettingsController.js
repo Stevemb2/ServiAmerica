@@ -299,4 +299,4 @@ const SettingsController = settingsParams => {
   );
 };
 
-module.exports = SettingsController;
+export default SettingsController;

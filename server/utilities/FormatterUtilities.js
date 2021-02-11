@@ -23,4 +23,4 @@ const FormatterUtilities = (logger) => {
     })
 }
 
-module.exports = FormatterUtilities;
+export default FormatterUtilities;

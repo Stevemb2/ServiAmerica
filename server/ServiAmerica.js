@@ -1,22 +1,61 @@
 // Imported Packages
 
-const express = require("express");
-const http = require("http");
-const path = require("path");
-const fs = require("fs");
-const bodyParser = require("body-parser");
-const multer = require("multer");
-const os = require("os");
-const mongoose = require("mongoose");
-const nodeMailer = require("nodemailer");
-const pdfkit = require("pdfkit");
-const jwt = require("jsonwebtoken");
-const winston = require("winston");
-const bcrypt = require("bcrypt");
-//const lodash = require("lodash");
+import express from "express";
+import http from "http";
+import path from "path";
+import fs from "fs";
+import bodyParser from "body-parser";
+import multer from "multer";
+import os from "os";
+import mongoose from "mongoose";
+import nodeMailer from "nodemailer";
+import pdfkit from "pdfkit";
+import jwt from "jsonwebtoken";
+import winston from "winston";
+import bcrypt from "bcrypt";
+//import lodash = from "lodash";
+import { fileURLToPath } from 'url';
 
 // Parseq for handling asynchronous functions
-const parseq = require("./parseq/parseq");
+import parseq from "./parseq/parseq.js";
+
+// Utilities
+
+import DateUtilities from "./utilities/DateUtilities.js";
+import TaxRatesUtilities from "./utilities/TaxRatesUtilities.js";
+import PDFUtilities from "./utilities/PDFUtilities.js";
+import FormatterUtilities from "./utilities/FormatterUtilities.js";
+import ClientsFileUtilities from "./utilities/ClientsFileUtilities.js";
+import AuthenticationUtilities from "./utilities/AuthenticationUtilities.js";
+
+// MongoDB Database Collections
+
+import UserCollection from "./database/UserCollection.js";
+import ClientCollection from "./database/ClientCollection.js";
+import TemplateCollection from "./database/TemplateCollection.js";
+import SettingsCollection from "./database/SettingsCollection.js";
+
+// Service
+
+import TaxEstimatorService from "./services/TaxEstimatorService.js";
+import TaxTableService from "./services/TaxTableService.js";
+import EmailService from "./services/EmailService.js";
+import AttachmentService from "./services/AttachmentService.js";
+
+// Controllers
+
+import TaxEstimatorController from "./controllers/TaxEstimatorController.js";
+import TaxTableController from "./controllers/TaxTableController.js";
+import EmailController from "./controllers/EmailController.js";
+import MailingLabelsController from "./controllers/MailingLabelsController.js";
+import ClientController from "./controllers/ClientController.js";
+import TemplateController from "./controllers/TemplateController.js";
+import AttachmentController from "./controllers/AttachmentController.js";
+import UserController from "./controllers/UserController.js";
+import SettingsController from "./controllers/SettingsController.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const attachmentDirectoryPath = path.join(__dirname, "..", "dist/attachments");
 const taxTableDirectoryPath = path.join(__dirname, "..", "dist/taxtables");
@@ -47,41 +86,6 @@ const Configuration = {
   hostname: "localhost",
   platform: os.platform()
 };
-
-// Utilities
-
-const DateUtilities = require("./utilities/DateUtilities");
-const TaxRatesUtilities = require("./utilities/TaxRatesUtilities");
-const PDFUtilities = require("./utilities/PDFUtilities");
-const FormatterUtilities = require("./utilities/FormatterUtilities");
-const ClientsFileUtilities = require("./utilities/ClientsFileUtilities");
-const AuthenticationUtilities = require("./utilities/AuthenticationUtilities");
-
-// MongoDB Database Collections
-
-const UserCollection = require("./database/UserCollection");
-const ClientCollection = require("./database/ClientCollection");
-const TemplateCollection = require("./database/TemplateCollection");
-const SettingsCollection = require("./database/SettingsCollection");
-
-// Service
-
-const TaxEstimatorService = require("./services/TaxEstimatorService");
-const TaxTableService = require("./services/TaxTableService");
-const EmailService = require("./services/EmailService");
-const AttachmentService = require("./services/AttachmentService");
-
-// Controllers
-
-const TaxEstimatorController = require("./controllers/TaxEstimatorController");
-const TaxTableController = require("./controllers/TaxTableController");
-const EmailController = require("./controllers/EmailController");
-const MailingLabelsController = require("./controllers/MailingLabelsController");
-const ClientController = require("./controllers/ClientController");
-const TemplateController = require("./controllers/TemplateController");
-const AttachmentController = require("./controllers/AttachmentController");
-const UserController = require("./controllers/UserController");
-const SettingsController = require("./controllers/SettingsController");
 
 // Logging
 

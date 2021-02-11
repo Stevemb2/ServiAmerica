@@ -161,4 +161,4 @@ const ClientCollection = (mongoose, logger) => {
   });
 };
 
-module.exports = ClientCollection;
+export default ClientCollection;

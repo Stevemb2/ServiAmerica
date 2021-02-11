@@ -82,4 +82,4 @@ const TaxTableService = (fs, logger) => {
   });
 };
 
-module.exports = TaxTableService;
+export default TaxTableService;

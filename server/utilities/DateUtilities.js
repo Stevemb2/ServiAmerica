@@ -114,4 +114,4 @@ const DateUtilities = logger => {
    });
 };
 
-module.exports = DateUtilities;
+export default DateUtilities;

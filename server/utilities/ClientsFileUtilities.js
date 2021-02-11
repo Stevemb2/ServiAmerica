@@ -117,4 +117,4 @@ const ClientsFileUtilities = (clientsDirectoryPath, fs, path, logger) => {
     });
 };
 
-module.exports = ClientsFileUtilities;
+export default ClientsFileUtilities;

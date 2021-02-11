@@ -503,4 +503,4 @@ const templateCollection = (mongoose, logger) => {
   });
 };
 
-module.exports = templateCollection;
+export default templateCollection;

@@ -165,4 +165,4 @@ const UserCollection = (
   });
 };
 
-module.exports = UserCollection;
+export default UserCollection;

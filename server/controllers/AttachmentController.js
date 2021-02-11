@@ -138,4 +138,4 @@ const AttachmentController = attachmentParams => {
   );
 };
 
-module.exports = AttachmentController;
+export default AttachmentController;

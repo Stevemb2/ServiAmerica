@@ -111,4 +111,4 @@ const FinancialCollection = (mongoose, logger) => {
   });
 };
 
-module.exports = FinancialCollection;
+export default FinancialCollection;

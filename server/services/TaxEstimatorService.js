@@ -29,4 +29,4 @@ const TaxEstimatorService = (taxRatesUtilities, logger) => {
   });
 };
 
-module.exports = TaxEstimatorService;
+export default TaxEstimatorService;

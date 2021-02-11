@@ -320,4 +320,4 @@ const EmailService = emailParams => {
   });
 };
 
-module.exports = EmailService;
+export default EmailService;

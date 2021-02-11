@@ -25,4 +25,4 @@ const TaxEstimatorController = taxEstimatorParams => {
   });
 };
 
-module.exports = TaxEstimatorController;
+export default TaxEstimatorController;
